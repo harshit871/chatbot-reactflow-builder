@@ -2,8 +2,7 @@ import { ReactComponent as WhatsappIcon} from '../assets/whatsapp-icon.svg'
 import { ReactComponent as ChatIcon } from '../assets/chat-icon.svg'
 import { Handle, Position } from 'reactflow';
 
-// custom node so that we can add nodes with header & custom node styling
-const NewNode = ({ data }) => {
+const NewNode = ({ data }) => { //* Custom node so that we can add nodes with header & custom node styling
   return (
     <div style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 2px 8px', borderRadius: '8px'}}>
       <section
@@ -28,15 +27,11 @@ const NewNode = ({ data }) => {
 
         <WhatsappIcon />
       </section>
-      <div
-        style={{
-          padding: '4px 12px 8px',
-        //   backgroundColor: '#fff'
-        }}
-      >
+      <div style={{padding: '4px 12px 8px',}}>
         <div
           style={{
             color: '#484848',
+            backgroundColor:'#fff',
           }}
         >
           {data.label}

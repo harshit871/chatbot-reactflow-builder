@@ -1,5 +1,6 @@
-// show different error/success notification based on the props receiuved by the Component
 const Notification = ({ errorMessage, messageColor }) => {
+  //* Showing different notification(error/success) based on the props received by the Component
+
     if (errorMessage) {
       return <div className={messageColor}>{errorMessage}</div>
     }

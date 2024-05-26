@@ -1,13 +1,12 @@
 :root {
   font-weight: 400;
   line-height: 1.5;
-  
   color: rgba(255, 255, 255, 0.87);
   background-color: #fff;
-
   font-family: system-ui, Arial, sans-serif;
 }
 
+/* Set up the body to center content and fill the viewport */
 body {
   margin: 0;
   display: flex;
@@ -16,6 +15,7 @@ body {
   min-height: 100vh;
 }
 
+/* Style for buttons */
 button {
   font-weight: 700;
   background-color: #fff;
@@ -28,8 +28,7 @@ button {
   font-size: 12px;
 }
 
-
-/* style for the topbar with save changes button */
+/* Style for the top bar containing the save changes button */
 .savingChange {
   font-size: 12px;
   background: #fcfcfc;
@@ -41,8 +40,8 @@ button {
   border-bottom: 2px solid grey;
 }
 
-/* topbar bar housing save changes button  */
-.topbar {
+/* Style for the top bar */
+.top-bar {
   font-size: 12px;
   background-color: #fff;
   padding: 12px;
@@ -52,7 +51,7 @@ button {
   border-bottom: 2px solid grey;
 }
 
-/* style for updating the node */
+/* Style for node update section */
 .update {
   padding: 5px 15px;
   font-size: 12px;
@@ -63,28 +62,33 @@ button {
   border-bottom: 1px solid #484848;
 }
 
+/* Style for back button in update section */
 .update .back {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
+/* Base style for nodes in the flow diagram */
 .react-flow__node {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
+/* Style for selected nodes in the flow diagram */
 .react-flow__node.selected {
-  border: 1px solid rgb(112, 178, 225);
+  border: 2px solid #72d1fd;
   border-radius: 10px;
 }
 
-.app-flow .rightbar {
+/* Style for the right bar in the app-flow container */
+.app-flow .right-bar {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   width: 30%;
 }
 
+/* Style for error messages */
 .redMessage {
   color: black;
   background: lightpink;
@@ -94,6 +98,7 @@ button {
   font-weight: 700;
 }
 
+/* Style for success messages */
 .greenMessage {
   color: black;
   background: lightgreen;
@@ -103,6 +108,7 @@ button {
   font-weight: 700;
 }
 
+/* Main container for the app flow layout */
 .app-flow {
   display: flex;
   flex-direction: column;
@@ -110,6 +116,7 @@ button {
   height: 100vh;
 }
 
+/* Style for sidebar within the app flow layout */
 .app-flow aside {
   padding: 15px 10px;
   font-size: 12px;
@@ -119,19 +126,20 @@ button {
   display: flex;
 }
 
+/* Style for descriptions within the app flow layout */
 .app-flow .description {
   margin: 10px;
   font-size: 12px;
   color: #484848;
 }
 
+/* Style for app nodes in the flow diagram */
 .app-flow .app-node {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 90px;
-
   background-color: #fff;
   border: 1px solid #484848;
   color: #484848;
@@ -144,22 +152,25 @@ button {
   transition: border-color 0.25s;
 }
 
+/* Style for the react flow wrapper in the app flow layout */
 .app-flow .reactflow-wrapper {
   flex-grow: 1;
   height: 89%;
 }
 
+/* Style for select all section within the app flow layout */
 .app-flow .selectall {
   margin-top: 10px;
 }
 
+/* Media query for larger screens to adjust the app flow layout */
 @media screen and (min-width: 768px) {
   .app-flow {
     display: flex;
     flex-direction: row;
   }
 
-  .rightbar {
+  .right-bar {
     width: 20%;
     max-width: 250px;
     border-left: 1px solid #484848;

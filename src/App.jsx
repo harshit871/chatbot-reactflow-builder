@@ -1,6 +1,6 @@
 import ReactFlow, { Controls, ReactFlowProvider } from 'reactflow';
 import './index.css'
-import 'reactflow/dist/style.css'; // styles from
+import 'reactflow/dist/style.css';
 import Topbar from './Components/Topbar'
 import Sidebar from './Components/Sidebar.jsx'
 import UpdateNode from './Components/UpdateNode.jsx'
@@ -33,7 +33,7 @@ const App = () => {
     <section className="app-flow">
       <ReactFlowProvider>
         <div className="reactflow-wrapper" ref={reactFlowWrapper}>
-          <div className="topbar">
+          <div className="top-bar">
             <Notification
               errorMessage={errorMessage}
               messageColor={messageColor}
@@ -57,7 +57,7 @@ const App = () => {
           </ReactFlow>
         </div>
         {nodeSelected ? (
-          <div className="rightbar">
+          <div className="right-bar">
             <Topbar saveFlow={saveFlow} />
 
             <UpdateNode
@@ -67,7 +67,7 @@ const App = () => {
             />
           </div>
         ) : (
-          <div className="rightbar">
+          <div className="right-bar">
             <Topbar saveFlow={saveFlow} />
 
             <Sidebar />
